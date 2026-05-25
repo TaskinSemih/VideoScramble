@@ -79,7 +79,7 @@ public class MainController {
     public void onBrowseInput() {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Sélectionner une vidéo d'entrée");
-        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Fichiers vidéo", "*.mp4", "*.avi", "*.mkv"));
+        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Fichiers vidéo", "*.mp4", "*.avi", "*.mkv", "*.m4v", "*.mov", "*.wmv", "*.flv"));
         File file = fileChooser.showOpenDialog(null);
         if (file != null) {
             inputPathField.setText(file.getAbsolutePath());
