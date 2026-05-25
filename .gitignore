@@ -1,0 +1,22 @@
+# Maven build output
+target/
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+*.classpath
+*.project
+.settings/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Generated video files
+*.avi
+*_scrambled.mp4
+*_unscrambled.mp4
+
+# Log files
+*.log

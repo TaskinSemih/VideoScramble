@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane styleClass="main-pane" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="videoscramble.ui.MainController">
+    <top>
+        <VBox styleClass="header-pane" alignment="CENTER" spacing="6">
+            <Label styleClass="app-title" text="VideoScramble" />
+            <Label styleClass="app-subtitle" text="Chiffrement et Déchiffrement Vidéo Analop-Permutation" />
+        </VBox>
+    </top>
+    
+    <center>
+        <HBox spacing="25" alignment="CENTER" styleClass="video-container">
+            <VBox spacing="12" alignment="CENTER" styleClass="video-box" HBox.hgrow="ALWAYS">
+                <Label text="Flux Vidéo Source" styleClass="video-label" />
+                <VBox styleClass="image-viewport" alignment="CENTER" VBox.vgrow="ALWAYS">
+                    <ImageView fx:id="originalVideoView" fitWidth="440" fitHeight="330" preserveRatio="true" />
+                </VBox>
+            </VBox>
+            <VBox spacing="12" alignment="CENTER" styleClass="video-box" HBox.hgrow="ALWAYS">
+                <Label text="Flux Vidéo Traité" styleClass="video-label" />
+                <VBox styleClass="image-viewport" alignment="CENTER" VBox.vgrow="ALWAYS">
+                    <ImageView fx:id="processedVideoView" fitWidth="440" fitHeight="330" preserveRatio="true" />
+                </VBox>
+            </VBox>
+        </HBox>
+    </center>
+    
+    <bottom>
+        <VBox styleClass="bottom-container">
+            <HBox spacing="20" styleClass="controls-pane" alignment="CENTER">
+                <!-- Card 1: Fichiers & Sources -->
+                <VBox spacing="12" styleClass="control-card" HBox.hgrow="ALWAYS">
+                    <Label text="1. SOURCE &amp; STÉGANOGRAPHIE" styleClass="card-title"/>
+                    <VBox spacing="8">
+                        <Label text="Fichier Vidéo d'entrée :" styleClass="input-label"/>
+                        <HBox spacing="8" alignment="CENTER_LEFT">
+                            <TextField fx:id="inputPathField" promptText="Sélectionner une vidéo..." HBox.hgrow="ALWAYS" styleClass="text-field-dark" />
+                            <Button text="Parcourir" onAction="#onBrowseInput" styleClass="btn-secondary"/>
+                        </HBox>
+                        <CheckBox fx:id="embedKeyCheckBox" text="Activer la Clé Embarquée" styleClass="check-box-dark" />
+                    </VBox>
+                </VBox>
+                
+                <!-- Card 2: Clés & Configuration -->
+                <VBox spacing="12" styleClass="control-card" prefWidth="380">
+                    <Label text="2. PARAMÈTRES DE LA CLÉ" styleClass="card-title"/>
+                    <VBox spacing="8">
+                        <HBox spacing="10" alignment="CENTER_LEFT">
+                            <VBox spacing="4" HBox.hgrow="ALWAYS">
+                                <Label text="Décalage R (0-255)" styleClass="input-label"/>
+                                <TextField fx:id="keyRField" promptText="R" styleClass="text-field-dark" />
+                            </VBox>
+                            <VBox spacing="4" HBox.hgrow="ALWAYS">
+                                <Label text="Pas S (0-127)" styleClass="input-label"/>
+                                <TextField fx:id="keySField" promptText="S" styleClass="text-field-dark" />
+                            </VBox>
+                            <VBox spacing="4" alignment="BOTTOM_CENTER">
+                                <Button text="Importer" onAction="#onBrowseKey" styleClass="btn-secondary" prefHeight="35"/>
+                            </VBox>
+                        </HBox>
+                        <HBox spacing="10">
+                            <VBox spacing="4" HBox.hgrow="ALWAYS">
+                                <Label text="Mode Opératoire" styleClass="input-label"/>
+                                <ComboBox fx:id="modeComboBox" maxWidth="Infinity" styleClass="combo-box-dark" />
+                            </VBox>
+                            <VBox spacing="4" prefWidth="120">
+                                <Label text="Critère" styleClass="input-label"/>
+                                <ComboBox fx:id="criterionComboBox" maxWidth="Infinity" styleClass="combo-box-dark" />
+                            </VBox>
+                        </HBox>
+                    </VBox>
+                </VBox>
+                
+                <!-- Card 3: Exécution -->
+                <VBox spacing="12" styleClass="control-card" prefWidth="250" alignment="TOP_CENTER">
+                    <Label text="3. ACTIONS" styleClass="card-title"/>
+                    <VBox spacing="10" alignment="CENTER" VBox.vgrow="ALWAYS">
+                        <Button text="LANCER LE FLUX" onAction="#onStart" styleClass="btn-primary" maxWidth="Infinity" prefHeight="40" />
+                        <Button text="Casser la Clé (Force Brute)" onAction="#onBruteForce" styleClass="btn-action" maxWidth="Infinity" prefHeight="35" />
+                    </VBox>
+                </VBox>
+            </HBox>
+            
+            <!-- Sleek Full-Width Status Bar -->
+            <HBox spacing="15" styleClass="status-bar" alignment="CENTER_LEFT">
+                <padding>
+                    <Insets left="20" right="20" top="8" bottom="8"/>
+                </padding>
+                <Label fx:id="statusLabel" text="Système prêt." styleClass="status-text" HBox.hgrow="ALWAYS" maxWidth="Infinity" />
+                <ProgressBar fx:id="progressBar" progress="0.0" prefWidth="300" styleClass="progress-bar-dark" />
+            </HBox>
+        </VBox>
+    </bottom>
+</BorderPane>
+

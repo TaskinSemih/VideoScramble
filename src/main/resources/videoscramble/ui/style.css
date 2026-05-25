@@ -1,0 +1,251 @@
+/* 
+ * @file    style.css
+ * @brief   Feuille de style premium, sobre et professionnelle pour VideoScramble
+ */
+
+.root {
+    -fx-font-family: "Segoe UI", "Inter", "Helvetica Neue", sans-serif;
+    -fx-background-color: #0F111A;
+    -fx-text-fill: #E5E7EB;
+}
+
+.main-pane {
+    -fx-background-color: #0F111A;
+}
+
+/* Header styling */
+.header-pane {
+    -fx-padding: 20 25 15 25;
+    -fx-background-color: #151824;
+    -fx-border-color: #222638;
+    -fx-border-width: 0 0 1 0;
+}
+
+.app-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #38BDF8;
+}
+
+.app-subtitle {
+    -fx-font-size: 13px;
+    -fx-text-fill: #6B7280;
+}
+
+/* Video Containers */
+.video-container {
+    -fx-padding: 20 25;
+}
+
+.video-box {
+    -fx-background-color: #151824;
+    -fx-border-color: #222638;
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 16;
+}
+
+.video-label {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #9CA3AF;
+}
+
+.image-viewport {
+    -fx-background-color: #08090E;
+    -fx-border-color: #1C1F2E;
+    -fx-border-width: 1px;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-padding: 6;
+}
+
+/* Bottom Container & Cards */
+.bottom-container {
+    -fx-background-color: #151824;
+    -fx-border-color: #222638;
+    -fx-border-width: 1 0 0 0;
+}
+
+.controls-pane {
+    -fx-padding: 20 25;
+}
+
+.control-card {
+    -fx-background-color: #1E2230;
+    -fx-border-color: #2D334A;
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 16;
+}
+
+.card-title {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #38BDF8;
+}
+
+.input-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #9CA3AF;
+}
+
+/* Inputs & ComboBoxes */
+.text-field-dark {
+    -fx-background-color: #131622;
+    -fx-text-fill: #F3F4F6;
+    -fx-border-color: #2D334A;
+    -fx-border-width: 1px;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-padding: 8 10;
+    -fx-prompt-text-fill: #4B5563;
+}
+
+.text-field-dark:focused {
+    -fx-border-color: #38BDF8;
+}
+
+.combo-box-dark {
+    -fx-background-color: #131622;
+    -fx-border-color: #2D334A;
+    -fx-border-width: 1px;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-padding: 5 10;
+}
+
+.combo-box-dark:showing {
+    -fx-border-color: #38BDF8;
+}
+
+.combo-box-dark > .list-cell {
+    -fx-text-fill: #F3F4F6;
+    -fx-background-color: transparent;
+}
+
+.combo-box-dark .list-view {
+    -fx-background-color: #131622;
+    -fx-border-color: #2D334A;
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+}
+
+.combo-box-dark .list-view .list-cell {
+    -fx-text-fill: #F3F4F6;
+    -fx-background-color: #131622;
+}
+
+.combo-box-dark .list-view .list-cell:hover {
+    -fx-background-color: #252A3F;
+    -fx-text-fill: #FFFFFF;
+}
+
+.combo-box-dark .list-view .list-cell:selected {
+    -fx-background-color: #0284C7;
+    -fx-text-fill: #FFFFFF;
+}
+
+/* Checkbox Style */
+.check-box-dark {
+    -fx-font-size: 12px;
+    -fx-text-fill: #9CA3AF;
+    -fx-cursor: hand;
+    -fx-padding: 5 0 0 0;
+}
+
+.check-box-dark > .box {
+    -fx-background-color: #131622;
+    -fx-border-color: #2D334A;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+}
+
+.check-box-dark:selected > .box {
+    -fx-background-color: #38BDF8;
+    -fx-border-color: #38BDF8;
+}
+
+.check-box-dark > .box > .mark {
+    -fx-background-color: transparent;
+}
+
+.check-box-dark:selected > .box > .mark {
+    -fx-background-color: #FFFFFF;
+}
+
+/* Buttons */
+.btn-primary {
+    -fx-background-color: #0284C7;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+}
+
+.btn-primary:hover {
+    -fx-background-color: #0369A1;
+}
+
+.btn-secondary {
+    -fx-background-color: #1C1F2E;
+    -fx-border-color: #2D334A;
+    -fx-border-width: 1px;
+    -fx-text-fill: #E5E7EB;
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+}
+
+.btn-secondary:hover {
+    -fx-background-color: #252A3F;
+    -fx-border-color: #38BDF8;
+}
+
+.btn-action {
+    -fx-background-color: #312E81;
+    -fx-border-color: #4338CA;
+    -fx-border-width: 1px;
+    -fx-text-fill: #E0E7FF;
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+}
+
+.btn-action:hover {
+    -fx-background-color: #3730A3;
+}
+
+/* Status Bar & Progress */
+.status-bar {
+    -fx-background-color: #0D0F17;
+    -fx-border-color: #1C1F2E;
+    -fx-border-width: 1 0 0 0;
+}
+
+.status-text {
+    -fx-font-size: 12px;
+    -fx-text-fill: #9CA3AF;
+}
+
+.progress-bar-dark {
+    -fx-accent: #38BDF8;
+}
+
+.progress-bar-dark > .track {
+    -fx-background-color: #1C1F2E;
+    -fx-background-radius: 4px;
+}
+
+.progress-bar-dark > .bar {
+    -fx-background-radius: 4px;
+}
+
